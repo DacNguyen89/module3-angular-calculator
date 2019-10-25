@@ -1,0 +1,15 @@
+<p>Awesome Calculator</p>
+<div>
+  <input (change)="onFirstChange($event.target.value)" [value]="first" class="form-input" type="number">
+  <select (change)="onSelectChange($event.target.value)" [value]="operator" class="form-input">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input (change)="onSecondChange($event.target.value)" [value]="second" class="form-input" type="number">
+</div>
+<div>
+  <button (click)="calculate()" class="form-input">Kết quả</button>
+</div>
+<div class="output">{{output}}</div>
